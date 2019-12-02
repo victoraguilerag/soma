@@ -21,6 +21,12 @@ function Service ({ name, icon }) {
                         position: relative;
                         cursor: pointer;
                     }
+                    .Service:hover {
+                        transition: box-shadow ease .3s;
+                        transition: transform ease .3s;
+                        transform: scale(1.04);
+                        box-shadow: 0 0 5px rgba(0,0,0,.2);
+                    }
                     .icon {
                         z-index: 2;
                     }

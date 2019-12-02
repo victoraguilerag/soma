@@ -59,11 +59,17 @@ function Services () {
                     }
                     .container {
                         display: grid;
-                        grid-template-columns: 274px 274px 274px;
+                        grid-template-columns: repeat(auto-fit, 274px);
+                        grid-column-gap: 16px;
                         grid-row-gap: 40px;
                         margin: o auto;
                         justify-content: space-around;
                         align-items: center;
+                    }
+                    @media screen and (min-width: 1024px) {
+                        .container {
+                            grid-template-columns: 274px 274px 274px;
+                        }
                     }
                 `}
             </style>
