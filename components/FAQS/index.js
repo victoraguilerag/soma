@@ -1,30 +1,54 @@
 import React from 'react'
-
+import FAQ from '../FAQ'
 function FAQS () {
     const items = [
         {
-            question: 'Pregunta',
-            response: 'Respuesta'
+            question: '¿Cuánto tardan en contactarme?',
+            response: 'Si tenés una duda o queja con respecto al técnico o la gestión ofrecida, podés comunicarte al correo contacto@somaservices para recibir una solución. '
         },
         {
-            question: 'Pregunta',
-            response: 'Respuesta'
+            question: '¿Qué pasa si tengo un problema?',
+            response: 'Si tenés una duda o queja con respecto al técnico o la gestión ofrecida, podés comunicarte al correo contacto@somaservices para recibir una solución. '
         },
+        {
+            question: '¿Los técnicos están matriculados?',
+            response: 'Si tenés una duda o queja con respecto al técnico o la gestión ofrecida, podés comunicarte al correo contacto@somaservices para recibir una solución. '
+        },
+        {
+            question: '¿Los técnicos están matriculados?',
+            response: 'Si tenés una duda o queja con respecto al técnico o la gestión ofrecida, podés comunicarte al correo contacto@somaservices para recibir una solución. '
+        }
     ]
     return (
         <div className="FAQS">
-            {
-                items && items.map(item => (
-                    <div className="FAQ">
-                        <div className="question">
-                            {item.question}
-                            <div className="response">
-                                {item.response}
-                            </div>
-                        </div>
-                    </div>
-                ))
-            }
+            <h3 className="title">Preguntas Frecuentes</h3>
+            <div className="faqs-container">
+                {
+                    items && items.map(item => (
+                        <FAQ question={item.question} response={item.response} />
+                    ))
+                }
+            </div>
+            <style jsx>
+                {`
+                    .FAQS {
+                    }
+                    .title {
+                        margin-top: 100px;
+                        margin-left: 16px;
+                        margin-bottom: 64px;
+                        font-family: 'Lato';
+                        font-size: 32px;
+                    }
+                    .faqs-container {
+                        display: grid;
+                        grid-template-columns: 1fr 1fr;
+                        grid-column-gap: 40px;
+                        grid-row-gap: 32px;
+                        padding: 0 16px;
+                    }
+                `}
+            </style>
         </div>
     )
 }
