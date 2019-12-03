@@ -6,9 +6,9 @@ function Formulario ({ item, active, deactiveModal }) {
             <img onClick={deactiveModal} className="close" src="/static/contact/close.svg" />
             <div className="icon-container">
                 <div className="icon-circle">
-                    <img className="icon" src="/static/service/camara.svg" />
+                    <img className="icon" src={`/static/service/${item.icon}.svg`} />
                 </div>
-                <h4>Seguridad</h4>
+                <h4>{item.name}</h4>
                 <p>Instalación y reparación de cámaras, circuito cerrado y alarmas.
     (Instalacion de camaras de circuito cerrado, alarmas, antirrobo, seguridad, vigilancia, consorcio, hogar)</p>
             </div>
@@ -141,7 +141,7 @@ function Formulario ({ item, active, deactiveModal }) {
                         font-family: 'Lato';
                         color: white;
                         margin: 40px auto 16px;
-                        font-size: 32px;
+                        font-size: 24px;
                     }
                     .icon-container p {
                         font-family: 'Lato';
