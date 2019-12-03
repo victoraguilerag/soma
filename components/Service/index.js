@@ -1,8 +1,8 @@
 import React from 'react'
 
-function Service ({ name, icon }) {
+function Service ({ name, icon, handleClick }) {
     return (
-        <div className="Service">
+        <div className="Service" onClick={handleClick}>
             <img className="selected" src="/static/service/selected-icon.svg" />
             <img className={`icon ${name}`} src={`/static/service/${icon}.svg`} />
             <div className="circle" />
@@ -20,6 +20,9 @@ function Service ({ name, icon }) {
                         border-radius: 8px;
                         position: relative;
                         cursor: pointer;
+                        z-index: 2;
+                        transition: box-shadow ease .3s;
+                        transition: transform ease .3s;
                     }
                     .Service:hover {
                         transition: box-shadow ease .3s;
