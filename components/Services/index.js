@@ -40,7 +40,7 @@ function Services () {
         setActiveModal(false)
     }
     return (
-        <div className="Services">
+        <div id="Services" className="Services">
             <div className="title">Servicios</div>
             <div className="container">
                 {
@@ -55,8 +55,8 @@ function Services () {
                 {`
                     .Services {
                         position: relative;
-                        padding-top: 64px;
-                        padding-bottom: 100px;
+                        padding-top: 140px;
+                        padding-bottom: 32px;
                         background: linear-gradient(147.09deg, #F8E540 38.73%, rgba(231, 107, 36, 0.8) 140.71%);
                     }
                     .title {
@@ -70,7 +70,7 @@ function Services () {
                         width: 200px;
                         border-radius: 0 8px 8px 0;
                         background: white;
-                        margin-bottom: 112px;
+                        margin-bottom: 40px;
                     }
                     .container {
                         display: grid;

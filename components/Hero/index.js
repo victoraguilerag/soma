@@ -3,7 +3,7 @@ import HeroForm from '../HeroForm'
 
 function Hero () {
     return (
-        <div className="Hero">
+        <div id="Hero" className="Hero">
             <h1 className="title">
                 Encontrá un técnico
             </h1>
@@ -32,6 +32,7 @@ function Hero () {
                         margin: 0 0 32px;
                     }
                     .sun-illustration {
+                        z-index: -1;
                         position: absolute;
                         right: -30%;
                         width: 700px;
@@ -40,19 +41,58 @@ function Hero () {
                         box-shadow: inset 0px 0px 15px rgba(0, 0, 0, 0.25);
                         top: 0;
                         border-radius: 50%;
-                        z-index: -1;
+                        z-index: -2;
                     }
                     .human-1 {
+                        z-index: -1;
                         position: absolute;
                         right: 15%;
                         transform: scale(.86);
                         top: 200px;
                     }
                     .human-2 {
+                        z-index: -1;
                         position: absolute;
                         top: 93px;
                         right: -60px;
                         transform: scale(.8);
+                    }
+                    @media screen and (max-width: 768px) {
+                        .Hero {
+                            padding-top: 40px;
+                            height: 800px;
+                        }
+                        .human-1, .human-2 {
+                            right: 0;
+                            left: -75px;
+                            bottom: 0;
+                            top: auto;
+                            transform: scale(.7);
+                        }
+                        .human-1 {
+                            bottom: -370px;
+                        }
+                        .human-2 {
+                            right: 0;
+                            left: auto;
+                            right: -75px;
+                            bottom: -400px;
+                        }
+                        .sun-illustration {
+                            bottom: -650px;
+                            left: -101px;
+                            z-index: -1;
+                            position: absolute;
+                            /* right: -30%; */
+                            width: 700px;
+                            height: 700px;
+                            background: linear-gradient(173.63deg,#F8E540 54.93%,rgba(231,107,36,0.8) 88.77%);
+                            box-shadow: inset 0px 0px 15px rgba(0,0,0,0.25);
+                            /* top: 0; */
+                            top: auto;
+                            border-radius: 50%;
+                            z-index: -2;
+                        }
                     }
                 `}
             </style>

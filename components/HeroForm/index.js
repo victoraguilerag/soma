@@ -49,6 +49,7 @@ function HeroForm () {
                         box-shadow: 0 1px 2px rgba(0,0,0,.2);
                         padding-left: 24px;
                         padding-right: 24px;
+                        background: white;
                     }
                     .telefono {
                         cursor: pointer;
@@ -80,6 +81,22 @@ function HeroForm () {
                     .solicitar-icon {
                         position: relative;
                         right: 32px;
+                    }
+                    @media screen and (max-width: 768px) {
+                        .HeroForm {
+                            padding-bottom: 600px;
+                            flex-flow: column;
+                            width: 100%;
+                            padding: 0;
+                        }
+                        .HeroForm .servicio, .HeroForm .telefono, .HeroForm .solicitar  {
+                            border-radius: 0;
+                            width: 100%;
+                            margin-bottom: 24px;
+                        }
+                        .HeroForm .telefono {
+                            width: calc(100% - 48px);
+                        }
                     }
                 `}
             </style>

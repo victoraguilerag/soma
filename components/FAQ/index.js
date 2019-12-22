@@ -54,7 +54,12 @@ function FAQ ({question, response}) {
                     .response.deactive {
                         display: none;
                     }
-                `}
+                    @media screen and (max-width: 768px) {
+                        .response.active {
+                            padding-left: 0;
+                            padding-right: 0;
+                        }
+                    }                `}
             </style>
         </div>
     )

@@ -2,7 +2,7 @@ import React from 'react'
 
 function ContactUs () {
     return (
-        <div className="ContactUs">
+        <div id="Contact" className="ContactUs">
             <h3 className="title">En dónde estamos</h3>
             <div className="container">
                 <div className="map">
@@ -32,6 +32,7 @@ function ContactUs () {
             <style jsx>
                 {`
                     .ContactUs {
+                        padding-top: 64px;
                         padding-bottom: 60px;
                     }
                     .title {
@@ -90,6 +91,22 @@ function ContactUs () {
                         bottom: -110px;
                         width: 400px;
                         right: -40px;
+                    }
+                    @media screen and (max-width: 768px) {
+                        .ContactUs {
+                            padding-bottom: 300px;
+                        }
+                        .container {
+                            grid-template-columns: 1fr;
+                        }
+                        .woman {
+                            bottom: -360px;
+                        }
+                        .information-container {
+                        }
+                        .map {
+                            width: 100%;
+                        }
                     }
                 `}
             </style>

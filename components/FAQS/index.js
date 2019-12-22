@@ -20,7 +20,7 @@ function FAQS () {
         }
     ]
     return (
-        <div className="FAQS">
+        <div id="FAQS" className="FAQS">
             <h3 className="title">Preguntas Frecuentes</h3>
             <div className="faqs-container">
                 {
@@ -32,6 +32,7 @@ function FAQS () {
             <style jsx>
                 {`
                     .FAQS {
+                        padding-top: 64px;
                     }
                     .title {
                         margin-top: 100px;
@@ -46,6 +47,11 @@ function FAQS () {
                         grid-column-gap: 40px;
                         grid-row-gap: 32px;
                         padding: 0 16px;
+                    }
+                    @media screen and (max-width: 768px) {
+                        .faqs-container {
+                            grid-template-columns: 1fr;
+                        }
                     }
                 `}
             </style>

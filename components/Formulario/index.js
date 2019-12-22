@@ -73,6 +73,7 @@ function Formulario ({ item, active, deactiveModal }) {
                         grid-gap: 32px;
                         margin-left: 32px;
                     }
+
                     .contact-form .form-title {
                         font-family: 'Lato';
                         font-size: 32px;
@@ -106,13 +107,13 @@ function Formulario ({ item, active, deactiveModal }) {
                         position: fixed;
                         top: 0;
                         left: 100%;
-                        z-index: 5;
+                        z-index: 201;
                         display: flex;
                         transition: 1.5s ease left;
                     }
                     .formulario.active {
                         left: 0;
-                        transition: 1.5s ease left;
+                        transition: 1s ease left;
                     }
                     .formulario .icon-circle {
                         width: 200px;
@@ -149,6 +150,32 @@ function Formulario ({ item, active, deactiveModal }) {
                         color: white;
                         text-align: center;
                         padding: 0 24px;
+                    }
+                    @media screen and (max-width: 768px) {
+                        .contact-form .inputs {
+                            grid-template-columns: 1fr;
+                        }
+                        .form-title, .contact-form {
+                            width: 100%;
+                        }
+                        .formulario {
+                            flex-flow: column;
+                            overflow-y: scroll;
+                        }
+                        .formulario .icon-container {
+                            width: 100%;
+                            padding-bottom: 32px;
+                        }
+                        .inputs {
+                            width: 80%;
+                        }
+                        .contact-form {
+                            padding-bottom: 64px;
+                        }
+                        .close {
+                            width: 32px;
+                            filter: brightness(0) invert(1);
+                        }
                     }
                 `}
             </style>

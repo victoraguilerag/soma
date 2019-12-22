@@ -14,6 +14,9 @@ function Layout (props) {
                         padding: 0;
                         overflow-x: hidden;
                     }
+                    :global(body.sticky) {
+                        padding-top: 127px;
+                    }
                     @import url('https://fonts.googleapis.com/css?family=Lato|Open+Sans&display=swap');
                 `}
             </style>
