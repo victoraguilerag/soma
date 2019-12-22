@@ -10,9 +10,12 @@ function HeroForm () {
                 required
             >
                 <option value={false}>Necesito...</option>
-                <option>Herreria</option>
-                <option>Refrigeracion</option>
-                <option>Refrigeracion</option>
+                <option value="Climatizacion">Climatización</option>
+                <option value="Reparaciones del hogar">Reparaciones del hogar</option>
+                <option value="Electricidad">Electricidad</option>
+                <option value="Seguridad">Seguridad</option>
+                <option value="Puertas y cerrajeria">Puertas y cerrajería</option>
+                <option value="Plomeria">Plomería</option>
             </select>
             <input
                 required
@@ -52,6 +55,7 @@ function HeroForm () {
                         background: white;
                     }
                     .telefono {
+                        
                         cursor: pointer;
                         font-family: 'Open Sans';
                         font-weight: 600;

@@ -12,7 +12,7 @@ function Perks () {
             image: '/static/perks/perk-icon-2.svg',
             imageActive: '/static/perks/perk-icon-2-active.svg',
             title: 'Rápidos',
-            subtitle: 'Tiempos de respuesta competitivos.'
+            subtitle: 'Tiempos de respuesta competitivos'
         },
         {
             image: '/static/perks/perk-icon-3.svg',

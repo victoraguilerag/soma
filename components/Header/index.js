@@ -55,11 +55,11 @@ function Header () {
                 <img className="menu-icon" src="/static/header/hamburger.svg" />
             </div>
             <nav onClick={handleMenu} className={`menu-drawer ${menu ? 'active': 'inactive'}`}>
-                <a onClick={() => setTarget('Header')} className="section">Que necesitas</a>
-                <a onClick={() => setTarget('Perks')} className="section">Perks</a>
-                <a onClick={() => setTarget('Services')} className="section">Services</a>
+                <a onClick={() => setTarget('Header')} className="section">Conseguí un técnico</a>
+                <a onClick={() => setTarget('Perks')} className="section">¿Por qué Soma Services?</a>
+                <a onClick={() => setTarget('Services')} className="section">Servicios</a>
                 <a onClick={() => setTarget('FAQS')} className="section">Preguntas Frecuentes</a>
-                <a onClick={() => setTarget('Contact')} className="section">Llamanos</a>
+                <a onClick={() => setTarget('Contact')} className="section">Contáctanos</a>
             </nav>
             <style jsx>
                 {`

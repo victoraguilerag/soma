@@ -3,14 +3,14 @@ import React from 'react'
 function ContactUs () {
     return (
         <div id="Contact" className="ContactUs">
-            <h3 className="title">En dónde estamos</h3>
+            <h3 className="title">Sobre nosotros</h3>
             <div className="container">
                 <div className="map">
                     <img className="map" src="/static/contact/map.png" />
                 </div>
                 <div className="information-container">
                     <div className="information">
-                        <div className="information-title">Direccion:</div>
+                        <div className="information-title">Dirección:</div>
                         <div className="information-subtitle">Capital Federal y GBA, Buenos Aires, Argentina.</div>
                         <img className="information-icon" src="/static/contact/location.svg" />
                     </div>

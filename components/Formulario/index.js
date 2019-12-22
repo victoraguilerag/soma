@@ -9,34 +9,34 @@ function Formulario ({ item, active, deactiveModal }) {
                     <img className="icon" src={`/static/service/${item.icon}.svg`} />
                 </div>
                 <h4>{item.name}</h4>
-                <p>Instalación y reparación de cámaras, circuito cerrado y alarmas.
-    (Instalacion de camaras de circuito cerrado, alarmas, antirrobo, seguridad, vigilancia, consorcio, hogar)</p>
+                <p>{item.description}</p>
             </div>
             <form className="contact-form">
-                <h3 className="form-title">Escribenos y te contactaremos.</h3>
+                <h3 className="form-title">Déjanos tus datos y te contactaremos:</h3>
+                <p className="section-label">Datos personales:</p>
                 <div className="inputs">
                     <label className="label">
                         Nombre
-                        <input type="text" className="input" placeholder="Victor" />
+                        <input type="text" className="input" placeholder="" />
                     </label>
                     <label>
-                        Telefono
-                        <input type="text" className="input" placeholder="+54 9 11 69512868" />
-                    </label>
-                </div>
-                <p className="section-label">Direccion</p>
-                <div className="inputs">
-                    <label className="label">
-                        Calle
-                        <input type="text" className="input" placeholder="Terrero" />
-                    </label>
-                    <label>
-                        Altura
-                        <input type="text" className="input" placeholder="1231" />
+                        Teléfono
+                        <input type="text" className="input" placeholder="" />
                     </label>
                     <label>
                         Email
-                        <input type="text" className="input" placeholder="victoraguilerago@gmail.com" />
+                        <input type="text" className="input" placeholder="" />
+                    </label>
+                </div>
+                <p className="section-label">Dirección:</p>
+                <div className="inputs">
+                    <label className="label">
+                        Calle
+                        <input type="text" className="input" placeholder="" />
+                    </label>
+                    <label>
+                        Altura
+                        <input type="text" className="input" placeholder="" />
                     </label>
                 </div>
                 <input type="submit" className="submit" value="Solicitar" />

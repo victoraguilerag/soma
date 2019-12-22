@@ -23,6 +23,11 @@ function Hero () {
                         margin: 0;
                         height: calc(100vh - 300px);
                     }
+                    @media screen and (min-width: 1200px) {
+                        .Hero {
+                            padding-left: 32px;
+                        }
+                    }
                     .title {
                         font-size: 32px;
                         margin-bottom: 8px;

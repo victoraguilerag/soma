@@ -4,18 +4,18 @@ function FAQS () {
     const items = [
         {
             question: '¿Cuánto tardan en contactarme?',
-            response: 'Si tenés una duda o queja con respecto al técnico o la gestión ofrecida, podés comunicarte al correo contacto@somaservices para recibir una solución. '
+            response: 'Nuestro equipo de atención responderá tu consulta a la brevedad. Si no recibís respuesta en 24 horas, podés intentar nuevamente o llamar al número de emergencias.'
+        },
+        {
+            question: '¿Ofrecen garantía?',
+            response: 'Todos nuestros servicios ofrecen una garantía de 1 año, siempre y cuando se cumplan las reglas pactadas al firmar la conformidad.'
+        },
+        {
+            question: '¿Los técnicos están matriculados?',
+            response: 'Cada uno de nuestros colaboradores está matriculado y certificado para trabajar en todo el territorio nacional.'
         },
         {
             question: '¿Qué pasa si tengo un problema?',
-            response: 'Si tenés una duda o queja con respecto al técnico o la gestión ofrecida, podés comunicarte al correo contacto@somaservices para recibir una solución. '
-        },
-        {
-            question: '¿Los técnicos están matriculados?',
-            response: 'Si tenés una duda o queja con respecto al técnico o la gestión ofrecida, podés comunicarte al correo contacto@somaservices para recibir una solución. '
-        },
-        {
-            question: '¿Los técnicos están matriculados?',
             response: 'Si tenés una duda o queja con respecto al técnico o la gestión ofrecida, podés comunicarte al correo contacto@somaservices para recibir una solución. '
         }
     ]
