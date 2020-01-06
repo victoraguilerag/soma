@@ -2,12 +2,13 @@ import React from 'react'
 
 function HeroForm () {
     return (
-        <form className="HeroForm">
+        <form action="https://formspree.io/xrgevrpp" method="POST"className="HeroForm">
             <select
                 className="servicio"
                 type="text"
                 placeholder="Necesito..."
                 required
+                name="Servicio"
             >
                 <option value={false}>Necesito...</option>
                 <option value="Climatizacion">Climatización</option>
@@ -19,6 +20,7 @@ function HeroForm () {
             </select>
             <input
                 required
+                name="Telefono"
                 className="telefono"
                 type="text"
                 placeholder="Mi telefono es..."

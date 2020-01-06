@@ -11,32 +11,32 @@ function Formulario ({ item, active, deactiveModal }) {
                 <h4>{item.name}</h4>
                 <p>{item.description}</p>
             </div>
-            <form className="contact-form">
+            <form action="https://formspree.io/xrgevrpp" method="POST" className="contact-form">
                 <h3 className="form-title">Déjanos tus datos y te contactaremos:</h3>
                 <p className="section-label">Datos personales:</p>
                 <div className="inputs">
                     <label className="label">
                         Nombre
-                        <input type="text" className="input" placeholder="" />
+                        <input name="Nombre" type="text" className="input" placeholder="" />
                     </label>
                     <label>
                         Teléfono
-                        <input type="text" className="input" placeholder="" />
+                        <input name="Telefono" type="text" className="input" placeholder="" />
                     </label>
                     <label>
                         Email
-                        <input type="text" className="input" placeholder="" />
+                        <input name="Email" type="text" className="input" placeholder="" />
                     </label>
                 </div>
                 <p className="section-label">Dirección:</p>
                 <div className="inputs">
                     <label className="label">
                         Calle
-                        <input type="text" className="input" placeholder="" />
+                        <input name="Calle" type="text" className="input" placeholder="" />
                     </label>
                     <label>
                         Altura
-                        <input type="text" className="input" placeholder="" />
+                        <input name="Altura" type="text" className="input" placeholder="" />
                     </label>
                 </div>
                 <input type="submit" className="submit" value="Solicitar" />
@@ -164,6 +164,7 @@ function Formulario ({ item, active, deactiveModal }) {
                         }
                         .formulario .icon-container {
                             width: 100%;
+                            height: fit-content;
                             padding-bottom: 32px;
                         }
                         .inputs {

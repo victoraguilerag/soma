@@ -53,12 +53,12 @@ function Hero () {
                         position: absolute;
                         right: 15%;
                         transform: scale(.86);
-                        top: 200px;
+                        top: 300px;
                     }
                     .human-2 {
                         z-index: -1;
                         position: absolute;
-                        top: 93px;
+                        top: 193px;
                         right: -60px;
                         transform: scale(.8);
                     }

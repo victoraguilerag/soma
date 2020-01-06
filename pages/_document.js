@@ -15,7 +15,8 @@ class MyDocument extends Document {
       <Html>
         <Head />
         <head>
-          <link href="https://fonts.googleapis.com/css?family=Lato|Open+Sans&display=swap" rel="stylesheet" />
+          <link rel="shortcut icon" type="image/x-icon" href="/static/favicon.ico" />
+          <meta name="theme-color" content="#E55D21"></meta>
         </head>
         <body>
           <Main />

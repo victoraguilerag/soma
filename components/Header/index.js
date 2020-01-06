@@ -49,7 +49,7 @@ function Header () {
             </div>
             <div className="phone">
                 <img className="phone-icon" src="/static/header/phone.svg" />
-                +54 9 11 69512868
+                +54 9 11 26454007
             </div>
             <div className="menu" onClick={handleMenu}>
                 <img className="menu-icon" src="/static/header/hamburger.svg" />
