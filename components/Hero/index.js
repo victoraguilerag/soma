@@ -21,7 +21,7 @@ function Hero () {
                         padding: 200px 16px 0;
                         padding-top: 200px;
                         margin: 0;
-                        height: calc(100vh - 300px);
+                        height: 440px;
                     }
                     @media screen and (min-width: 1200px) {
                         .Hero {
