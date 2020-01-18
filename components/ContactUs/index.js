@@ -90,6 +90,9 @@ function ContactUs () {
                         top: -4%;
                         left: 10%;
                     }
+                    .map {
+                        max-width: 100%;
+                    }
                     .woman {
                         position: absolute;
                         bottom: -110px;

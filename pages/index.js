@@ -42,7 +42,7 @@ function Home() {
     ]
     return (
         <Layout>
-            <Hero items={items} />
+            <Hero items={items}/>
             <Perks />
             <Services items={items} />
             <FAQS />
