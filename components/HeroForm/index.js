@@ -1,34 +1,60 @@
-import React from 'react'
+import { useRef, useState } from 'react';
+import Formulario from '../Formulario';
 
-function HeroForm () {
+function HeroForm ({ items }) {
+    const telefono = useRef()
+    const servicio = useRef()
+    const [selected, setSelected] = useState(false)
+    const [active, setActive] = useState(false)
+
+    const handleSubmit = (e) => {
+        e.preventDefault()
+        localStorage.setItem('servicio', servicio.current.value);
+        localStorage.setItem('telefono', telefono.current.value);
+        console.log(items[servicio.current.value]);
+        setSelected(items[servicio.current.value]);
+        setActive(true);
+    }
+    // action="https://formspree.io/xrgevrpp"
+    // method="POST"
     return (
-        <form action="https://formspree.io/xrgevrpp" method="POST"className="HeroForm">
+        <form
+            className="HeroForm"
+        >
+            <Formulario
+                item={selected}
+                active={active}
+                deactiveModal={() => setActive(false)}
+                telefono={telefono.current ? telefono.current.value: ""}
+            />
             <select
                 className="servicio"
                 type="text"
                 placeholder="Necesito..."
                 required
+                ref={servicio}
                 name="Servicio"
             >
                 <option value={false}>Necesito...</option>
-                <option value="Climatizacion">Climatización</option>
-                <option value="Reparaciones del hogar">Reparaciones del hogar</option>
-                <option value="Electricidad">Electricidad</option>
-                <option value="Seguridad">Seguridad</option>
-                <option value="Puertas y cerrajeria">Puertas y cerrajería</option>
-                <option value="Plomeria">Plomería</option>
+                {
+                    items.map((item, i) => (
+                        <option value={i}>{item.name}</option>
+                    ))
+                }
             </select>
             <input
                 required
                 name="Telefono"
                 className="telefono"
                 type="text"
+                ref={telefono}
                 placeholder="Mi telefono es..."
             />
             <input
-                className="solicitar"
                 type="submit"
+                className="solicitar"
                 value="Solicitar"
+                onClick={handleSubmit}
             />
             <img src="/static/hero/right.svg" className="solicitar-icon" />
 
@@ -66,7 +92,7 @@ function HeroForm () {
                         max-height: 50px;
                         border: none;
                         box-shadow: 0 1px 2px rgba(0,0,0,.2);
-                        padding-left: 24px;
+                        padding-left: 8px;
                         padding-right: 24px;
                     }
                     .solicitar {

@@ -6,7 +6,11 @@ function ContactUs () {
             <h3 className="title">Sobre nosotros</h3>
             <div className="container">
                 <div className="map">
-                    <img className="map" src="/static/contact/map.png" />
+                    <img
+                        className="map"
+                        src="/static/contact/map.png"
+                        alt="Google Map of Albany, NY"
+                    />
                 </div>
                 <div className="information-container">
                     <div className="information">
@@ -100,7 +104,7 @@ function ContactUs () {
                             grid-template-columns: 1fr;
                         }
                         .woman {
-                            bottom: -360px;
+                            bottom: -366px;
                         }
                         .information-container {
                         }

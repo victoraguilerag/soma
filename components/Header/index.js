@@ -70,7 +70,7 @@ function Header () {
                         padding-top: 32px;
                     }
                     .menu-drawer .section {
-                        width: 100%;
+                        width: 400px;
                         height: 50px;
                         margin-top: 24px;
                         padding-left: 24px;
@@ -84,18 +84,21 @@ function Header () {
                     }
 
                     .menu-drawer {
-                        width: 100%;
+                        opacity: 0;
+                        width: 400px;
+                        box-shadow: 0 0 4px rgba(0,0,0,.4);
                         height: 100vh;
                         position: absolute;
-                        left: 100%;
-                        transition: left .5s ease;
+                        right: -400px;
+                        transition: right .5s ease;
                         background: white;
                         z-index: 210;
                     }
                     .menu-drawer.active {
-                        left: 0;
+                        opacity: 1;
+                        right: 0;
                         top: 0;
-                        transition: left .5s ease;
+                        transition: right .5s ease;
                     }
                     .Header {
                         height: 100px;
@@ -145,6 +148,9 @@ function Header () {
                         top: 4px;
                         margin-right: 8px;
                     }
+                    .logo .logo-icon {
+                        width: 320px;
+                    }
                     @media screen and (max-width: 768px) {
                         .Header {
                             display: grid;
@@ -167,6 +173,9 @@ function Header () {
                         .menu .menu-icon {
                             width: 24px;
                             right: 24px;
+                        }
+                        .menu-drawer {
+                            width: 100%;
                         }
                         .servicio {
                             width: 100%;

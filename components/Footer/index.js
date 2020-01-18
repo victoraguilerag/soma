@@ -9,8 +9,13 @@ function Footer () {
                     .Footer {
                         width: 100%;
                         background: blue;
-                        height: 50px;
+                        height: 100px;
                         background: #0F144C;
+
+                        display: flex;
+                        justify-content: center;
+                        align-items: flex-end;
+                        color: white;
                     }
                     .Footer .copy {
                         font-family: Open Sans;

@@ -17,6 +17,8 @@ function FAQ ({question, response}) {
             <style jsx>
                 {`
                     .FAQ {
+                        position: relative;
+                        bottom: 0;
                         min-height: 60px;
                         box-shadow: 0 1px 5px rgba(0,0,0,.2);
                         border-radius: 8px;
@@ -24,7 +26,6 @@ function FAQ ({question, response}) {
                         grid-template-columns: 40px 1fr 40px;
                         align-items: center;
                         padding-left: 24px;
-                        position: relative;
                         cursor: pointer;
                     }
                     .FAQ.deactive {

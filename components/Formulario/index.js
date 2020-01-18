@@ -1,6 +1,6 @@
 import React from 'react'
 
-function Formulario ({ item, active, deactiveModal }) {
+function Formulario ({ item, active, deactiveModal, telefono }) {
     return (
         <div className={`formulario ${active ? 'active': ''}`}>
             <img onClick={deactiveModal} className="close" src="/static/contact/close.svg" />
@@ -21,14 +21,13 @@ function Formulario ({ item, active, deactiveModal }) {
                     </label>
                     <label>
                         Teléfono
-                        <input name="Telefono" type="text" className="input" placeholder="" />
+                        <input defaultValue={telefono} name="Telefono" type="text" className="input" placeholder="" />
                     </label>
                     <label>
                         Email
                         <input name="Email" type="text" className="input" placeholder="" />
                     </label>
                 </div>
-                <p className="section-label">Dirección:</p>
                 <div className="inputs">
                     <label className="label">
                         Calle
@@ -43,6 +42,9 @@ function Formulario ({ item, active, deactiveModal }) {
             </form>
             <style jsx>
                 {`
+                    .inputs {
+                        margin-top: 16px;
+                    }
                     .close {
                         position: absolute;
                         top: 5%;
@@ -72,6 +74,7 @@ function Formulario ({ item, active, deactiveModal }) {
                         grid-template-columns: 1fr 1fr;
                         grid-gap: 32px;
                         margin-left: 32px;
+                        color: black;
                     }
 
                     .contact-form .form-title {
@@ -93,6 +96,8 @@ function Formulario ({ item, active, deactiveModal }) {
                         box-shadow: 1px 1px 4px rgba(0,0,0,.2);
                         padding-left: 16px;
                         margin-top: 8px;
+                        font-size: 24px;
+                        color: gray;
                     }
                     .section-label {
                         margin-left: 32px;
@@ -151,6 +156,7 @@ function Formulario ({ item, active, deactiveModal }) {
                         text-align: center;
                         padding: 0 24px;
                     }
+
                     @media screen and (max-width: 768px) {
                         .contact-form .inputs {
                             grid-template-columns: 1fr;

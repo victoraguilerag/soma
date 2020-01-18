@@ -1,7 +1,7 @@
 import React from 'react'
 import HeroForm from '../HeroForm'
 
-function Hero () {
+function Hero ({ items }) {
     return (
         <div id="Hero" className="Hero">
             <h1 className="title">
@@ -10,7 +10,7 @@ function Hero () {
             <h2 className="subtitle">
                 Tareas de instalación, reparación y mantenimiento del hogar.
             </h2>
-            <HeroForm />
+            <HeroForm items={items} />
             <img className="human-1" src="/static/hero/hero-human.svg" />
             <img className="human-2" src="/static/hero/hero-human-2.svg" />
             <div className="sun-illustration" />
