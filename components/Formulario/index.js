@@ -11,7 +11,7 @@ function Formulario ({ item, active, deactiveModal, telefono }) {
                 <h4>{item.name}</h4>
                 <p>{item.description}</p>
             </div>
-            <form action="https://formspree.io/xrgevrpp" method="POST" className="contact-form">
+            <form action="https://formspree.io/xeqapbpa" method="POST" className="contact-form">
                 <h3 className="form-title">Déjanos tus datos y te contactaremos:</h3>
                 <p className="section-label">Datos personales:</p>
                 <div className="inputs">
