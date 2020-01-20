@@ -170,6 +170,7 @@ function Formulario ({ item, active, deactiveModal, telefono }) {
                         }
                         .formulario .icon-container {
                             width: 100%;
+                            min-height: 360px;
                             height: fit-content;
                             padding-bottom: 32px;
                         }
