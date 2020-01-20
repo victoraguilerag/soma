@@ -165,6 +165,9 @@ function Header () {
                         .logo {
                             margin-top: 16px;
                         }
+                        .logo .logo-icon {
+                            max-width: 260px;
+                        }
                         .menu {
                             position: absolute;
                             top: 32px;
