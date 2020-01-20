@@ -75,13 +75,13 @@ function Hero ({ items }) {
                             transform: scale(.7);
                         }
                         .human-1 {
-                            bottom: -370px;
+                            bottom: -416px;
                         }
                         .human-2 {
                             right: 0;
                             left: auto;
                             right: -75px;
-                            bottom: -400px;
+                            bottom: -431px;
                         }
                         .sun-illustration {
                             bottom: -650px;
