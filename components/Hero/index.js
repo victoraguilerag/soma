@@ -66,25 +66,29 @@ function Hero ({ items }) {
                         .Hero {
                             padding-top: 40px;
                             height: 800px;
+                            position: relative;
                         }
                         .human-1, .human-2 {
                             right: 0;
-                            left: -75px;
                             bottom: 0;
                             top: auto;
                             transform: scale(.7);
                         }
                         .human-1 {
-                            bottom: -416px;
+                            bottom: -8px;
+                            transform: scale(1);
+                            height: 349px;
+                            left: 0;
                         }
                         .human-2 {
+                            bottom: -3px;
+                            transform: scale(1);
+                            max-height: 400px;
+                            width: auto;
                             right: 0;
-                            left: auto;
-                            right: -75px;
-                            bottom: -431px;
                         }
                         .sun-illustration {
-                            bottom: -650px;
+                            bottom: -300px;
                             left: -101px;
                             z-index: -1;
                             position: absolute;
