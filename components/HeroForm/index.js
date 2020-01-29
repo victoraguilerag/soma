@@ -9,6 +9,10 @@ function HeroForm ({ items }) {
 
     const handleSubmit = (e) => {
         e.preventDefault()
+        if (!servicio.current.value || servicio.current.value === "false" || servicio.current.value === "Necesito") {
+            servicio.current.focus()
+            return false
+        }
         localStorage.setItem('servicio', servicio.current.value);
         localStorage.setItem('telefono', telefono.current.value);
         console.log(items[servicio.current.value]);
@@ -23,6 +27,7 @@ function HeroForm ({ items }) {
         >
             <Formulario
                 item={selected}
+                items={items}
                 active={active}
                 deactiveModal={() => setActive(false)}
                 telefono={telefono.current ? telefono.current.value: ""}
@@ -38,7 +43,7 @@ function HeroForm ({ items }) {
                 <option value={false}>Necesito...</option>
                 {
                     items.map((item, i) => (
-                        <option value={i}>{item.name}</option>
+                        <option value={item.name}>{item.name}</option>
                     ))
                 }
             </select>
@@ -127,7 +132,7 @@ function HeroForm ({ items }) {
                             margin-bottom: 24px;
                         }
                         .HeroForm .telefono {
-                            width: calc(100% - 48px);
+                            width: calc(100% - 32px);
                         }
                     }
                 `}

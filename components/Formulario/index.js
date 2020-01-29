@@ -1,6 +1,6 @@
 import React from 'react'
 
-function Formulario ({ item, active, deactiveModal, telefono }) {
+function Formulario ({ item, items, active, deactiveModal, telefono, servicio }) {
     return (
         <div className={`formulario ${active ? 'active': ''}`}>
             <img onClick={deactiveModal} className="close" src="/static/contact/close.svg" />
@@ -20,6 +20,23 @@ function Formulario ({ item, active, deactiveModal, telefono }) {
                         <input name="Nombre" type="text" className="input" placeholder="" />
                     </label>
                     <label>
+                        Que necesitas?
+                        <select
+                            className="servicio input"
+                            type="text"
+                            placeholder="Necesito..."
+                            required
+                            name="Servicio"
+                        >
+                            <option disable value={false}>Necesito...</option>
+                            {
+                                items && items.map((item, i) => (
+                                    <option value={i}>{item.name}</option>
+                                ))
+                            }
+                        </select>
+                    </label>
+                    <label>
                         Teléfono
                         <input defaultValue={telefono} name="Telefono" type="text" className="input" placeholder="" />
                     </label>
@@ -37,15 +54,41 @@ function Formulario ({ item, active, deactiveModal, telefono }) {
                         Altura
                         <input name="Altura" type="text" className="input" placeholder="" />
                     </label>
+                    <label className="descripcion-container">
+                        Describe tu consulta
+                        <textarea name="descripcion" type="text" className="input" placeholder="" />
+                    </label>
                 </div>
                 <input type="submit" className="submit" value="Solicitar" />
             </form>
             <style jsx>
                 {`
+                    .descripcion-container {
+                        grid-column: 1/3;
+                        border: none;
+                    }
+                    .descripcion-container textarea {
+                        box-shadow: 1px 1px 4px rgba(0,0,0,.2);
+                        border: none;
+                        height: 100px;
+                        border-radius: 4px;
+                        margin-top: 8px;
+                        padding: 20px;
+                        height: 80px;
+                    }
+                    .servicio.input {
+                        height: 42px;
+                        border: none;
+                        background: white;
+                        border-radius: 0;
+                        box-shadow: 1px 1px 4px rgba(0,0,0,.2);
+                        margin-top: 8px;
+                    }
                     .inputs {
                         margin-top: 16px;
                     }
                     .close {
+                        z-index: 200px;
                         position: absolute;
                         top: 5%;
                         right: 5%;
@@ -130,6 +173,7 @@ function Formulario ({ item, active, deactiveModal, telefono }) {
                         align-items: center;
                     }
                     .formulario .icon-container {
+                        text-align: center;
                         width: 30%;
                         height: 90%;
                         background: #E55D21;
@@ -158,6 +202,9 @@ function Formulario ({ item, active, deactiveModal, telefono }) {
                     }
 
                     @media screen and (max-width: 768px) {
+                        .descripcion-container {
+                            grid-column: 1;
+                        }
                         .contact-form .inputs {
                             grid-template-columns: 1fr;
                         }

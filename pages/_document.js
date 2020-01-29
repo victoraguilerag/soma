@@ -17,6 +17,7 @@ class MyDocument extends Document {
         <head>
           <link rel="shortcut icon" type="image/x-icon" href="/static/favicon.ico" />
           <meta name="theme-color" content="#E55D21"></meta>
+          <title>Soma</title>
         </head>
         <body>
           <Main />
