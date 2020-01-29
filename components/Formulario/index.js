@@ -31,7 +31,7 @@ function Formulario ({ item, items, active, deactiveModal, telefono, servicio })
                             <option disable value={false}>Necesito...</option>
                             {
                                 items && items.map((item, i) => (
-                                    <option value={i}>{item.name}</option>
+                                    <option value={item.name}>{item.name}</option>
                                 ))
                             }
                         </select>

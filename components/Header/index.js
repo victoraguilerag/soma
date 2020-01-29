@@ -89,7 +89,7 @@ function Header () {
                         box-shadow: 0 0 4px rgba(0,0,0,.4);
                         height: 100vh;
                         position: absolute;
-                        right: -400px;
+                        right: -600px;
                         transition: right .5s ease;
                         background: white;
                         z-index: 210;

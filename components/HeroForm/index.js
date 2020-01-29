@@ -43,7 +43,7 @@ function HeroForm ({ items }) {
                 <option value={false}>Necesito...</option>
                 {
                     items.map((item, i) => (
-                        <option value={item.name}>{item.name}</option>
+                        <option value={i}>{item.name}</option>
                     ))
                 }
             </select>
